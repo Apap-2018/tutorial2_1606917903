@@ -1,0 +1,104 @@
+Latihan Project Viral
+1.
+a. Tidak terjadi compile error.
+
+b. Terjadi error sebagai berikut:
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Sep 19 14:07:59 ICT 2018
+There was an unexpected error (type=Not Found, status=404).
+No message available"
+
+Hal tersebut terjadi karena mapping yang ada di @RequestMapping dengan yang di-return oleh method index berbeda.
+
+c. Kegunaan @RequestMapping("/viral") adalah melakukan mapping ke url /viral yang di-return oleh method index.
+
+
+2.
+a. Tidak terjadi compile error.
+
+b. Tidak terjadi error apapun karena penggantian nama method tidak akan mempengaruhi mapping url.
+
+
+3.
+a. Tidak terjadi compile error.
+
+b. Terjadi error sebagai berikut:
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Sep 19 14:20:11 ICT 2018
+There was an unexpected error (type=Internal Server Error, status=500).
+Error resolving template "viral2jari", template might not exist or might not be accessible by any of the configured Template Resolvers"
+Hal tersebut terjadi karena tidak ada template bernama viral2jari.html.
+
+c. Return type pada method controller berfungsi untuk mapping controller dengan template html yang ada pada folder templates. Oleh karena itu, return type harus sama dengan nama file yang akan di-render.
+
+
+
+
+
+Latihan Request Parameter
+1. Karena tulisan "In My Feeling" hanya label saja. Label tersebut tidak akan muncul di browser.
+
+
+2. Terjadi error sebagai berikut:
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Sep 19 14:43:46 ICT 2018
+There was an unexpected error (type=Not Found, status=404).
+No message available"
+Hal ini terjadi karena perbedaan @RequestMapping dengan yang akan direturn oleh method challenge.
+
+
+3.
+a. Terjadi error sebagai berikut:
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Sep 19 14:46:43 ICT 2018
+There was an unexpected error (type=Bad Request, status=400).
+Required String parameter 'name' is not present"
+Hal ini terjadi karena parameter name harus diisi sesuatu (required).
+
+b. Akan ditampilkan sebagai berikut:
+"null do you love me?
+
+Are you riding?"
+Hal ini terjadi karena parameter nama tidak diisi sehingga menampilkan null.
+
+c. Akan ditampilkan sebagai berikut:
+"kiki do you love me?
+
+Are you riding?"
+Hal ini terjadi karena parameter nama tidak diisi namun terdapat nilai default yaitu kiki, sehingga muncul kata kiki pada parameter.
+
+
+
+
+
+Latihan Path Variable
+1. Terdapat error sebagai berikut:
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Sep 19 14:52:14 ICT 2018
+There was an unexpected error (type=Bad Request, status=400).
+Required String parameter 'name' is not present"
+Hal ini terjadi karena dibutuhkan parameter name namun tidak diisi oleh apapun.
+
+
+2. Akan muncul tampilan sebagai berikut:
+"KB do you love me?
+
+Are you riding?"
+Parameter name terisi oleh KB.
+
+
+3. Akan muncul tampilan sebagai berikut:
+"kiki do you love me?
+
+Are you riding?"
+Parameter name terisi oleh kiki.
