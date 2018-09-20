@@ -90,7 +90,7 @@ Required String parameter 'name' is not present"
 Hal ini terjadi karena dibutuhkan parameter name namun tidak diisi oleh apapun.
 
 
-2. Akan muncul tampilan sebagai berikut:
+2. Pada awalnya akan muncul error karena terjadi ambiguitas. Akan tetapi, jika fungsi challenge yang pertama dihapus, akan muncul tampilan sebagai berikut:
 "KB do you love me?
 
 Are you riding?"
